@@ -1,0 +1,79 @@
+.category-container {
+    padding: 0vh 3vw 0vh 3vw;
+}
+
+.side-view {
+    width: 25vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-view>h3 {
+    font-family: Single Day;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 18vh;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(114, 219, 115, 1);
+    margin: 0;
+}
+
+.side-view>p {
+    margin: 0;
+    margin-bottom: 5vh;
+    font-family: Roboto;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 12vh;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1)
+}
+
+.selected-category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1vw;
+}
+
+.selected-category>div {
+    width: 45%;
+    height: 40%;
+    border-radius: 31px;
+    background-color: rgba(20, 138, 8, 1);
+    font-family: Roboto;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.selected-category>div>img {
+    height: 45%;
+    width: 10%;
+    cursor: pointer;
+}
+
+.error {
+    margin-top: 2vh;
+    color: rgba(255, 0, 0, 1);
+    font-family: Roboto;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+.error>img {
+    height: 32%;
+    margin-right: 0.4vw;
+}

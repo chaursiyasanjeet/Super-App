@@ -41,7 +41,6 @@ body {
     margin: auto;
     justify-content: center;
     align-items: center;
-    background-color: rgb(19, 19, 19);
 }
 
 
@@ -142,7 +141,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .term-text {
     font-family: Roboto;
-    font-size: 1.9vh;
+    font-size: 0.65em;
     font-weight: 500;
     line-height: 1.2em;
     letter-spacing: 0.15em;
