@@ -1,7 +1,9 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 export default function SignupFrom() {
+
+    const redirect = useNavigate()
 
     //Setting Form data
     const [name, setName] = useState("");
@@ -50,7 +52,7 @@ export default function SignupFrom() {
         if (Object.values(error).every((v) => v === false)) {
             const userData = { name, userName, email, mobile, isChecked }
             localStorage.setItem("userData", JSON.stringify(userData))
-            window.location.href = "http://stackoverflow.com"
+            redirect("/category")
         }
 
 
