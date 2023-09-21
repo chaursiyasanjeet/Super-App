@@ -1,6 +1,8 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./CategoryChoose.css";
 import cross from "../../assets/cross.png";
-import error from "../../assets/error.png";
+import errorIcon from "../../assets/error.png";
 import CategoryCard from "../../Components/CategoryCards/CategoryCard";
 import action from "../../assets/action.png";
 import thriller from "../../assets/thriller.png";
@@ -13,6 +15,11 @@ import western from "../../assets/western.png";
 import horror from "../../assets/horror.png";
 
 function CategoryChoose() {
+  const redirect = useNavigate();
+
+  const [cardSelect, setCardSelect] = useState([]);
+  const [error, setError] = useState(false);
+
   const cardData = [
     { name: "Action", img: action, bgColor: " rgba(255, 82, 9, 1)" },
     { name: "Drama", img: drama, bgColor: "rgba(215, 164, 255, 1)" },
@@ -24,29 +31,44 @@ function CategoryChoose() {
     { name: "Music", img: music, bgColor: "rgba(230, 30, 50, 1)" },
     { name: "Fiction", img: fiction, bgColor: "rgba(108, 208, 97, 1)" },
   ];
+
+  const handleclick = () => {
+    if (cardSelect.length >= 3) {
+      setError(false);
+      localStorage.setItem("categories", JSON.stringify(cardSelect));
+      redirect("/homepage");
+    } else {
+      setError(true);
+    }
+  };
+
+  const deselectCard = (e) => {
+    const findIndex = cardSelect.indexOf(e.target.alt);
+    cardSelect.splice(findIndex, 1);
+    setCardSelect([...cardSelect]);
+  };
+
+  const data = cardSelect.map((item, index) => {
+    return (
+      <div>
+        {item}
+        <img onClick={deselectCard} src={cross} alt={item} />
+      </div>
+    );
+  });
+
   return (
     <div className="category-container">
       <div className="side-view">
         <h3>Super app</h3>
         <p>Choose your entertainment category</p>
-        <div className="selected-category">
-          <div>
-            Romance
-            <img src={cross} alt="close_icon" />
+        <div className="selected-category">{data}</div>
+        {error && (
+          <div className="error">
+            <img src={errorIcon} alt="alert_icon" />
+            Minimum 3 category required
           </div>
-          <div>
-            Thriller
-            <img src={cross} alt="close_icon" />
-          </div>
-          <div>
-            Action
-            <img src={cross} alt="close_icon" />
-          </div>
-        </div>
-        <div className="error">
-          <img src={error} alt="alert_icon" />
-          Minimum 3 category required
-        </div>
+        )}
       </div>
       <div className="category-cards-box">
         {cardData.map((item, index) => {
@@ -56,11 +78,14 @@ function CategoryChoose() {
               name={item.name}
               img={item.img}
               bgColor={item.bgColor}
+              cardSelect={cardSelect}
+              setCardSelect={setCardSelect}
+              selectedStatus={cardSelect.includes(item.name) ? true : false}
             />
           );
         })}
       </div>
-      <button>Next Page</button>
+      <button onClick={handleclick}>Next Page</button>
     </div>
   );
 }
