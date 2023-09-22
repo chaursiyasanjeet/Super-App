@@ -32,23 +32,12 @@
     justify-content: space-between;
 }
 
-
-
-
-.weather-details {
-    border-radius: 6px;
-    height: 35%;
-    background-color: azure;
-}
-
-
-
-
 .timer {
     height: 35%;
     background-color: rgba(30, 35, 67, 1);
     border-radius: 6px;
 }
+
 
 ::-webkit-scrollbar {
     display: none;

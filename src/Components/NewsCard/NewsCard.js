@@ -32,6 +32,7 @@ function NewsCard() {
   useEffect(() => {
     fetchNews();
   }, []);
+
   return (
     <>
       <img className="news-img" src={news && news.urlToImage} alt="news" />

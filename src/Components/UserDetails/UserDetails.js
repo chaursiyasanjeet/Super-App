@@ -1,6 +1,5 @@
 import "./UserDetails.css";
 import profile from "../../assets/profile.png";
-import { useState } from "react";
 function UserDetails() {
   const user = JSON.parse(localStorage.getItem("userData"));
   const category = JSON.parse(localStorage.getItem("categories"));
