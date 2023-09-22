@@ -13,6 +13,7 @@
 
 
 .user-details-box>div {
+    width: 80%;
     display: flex;
     flex-direction: column;
     margin-top: 1.8%;
@@ -29,6 +30,8 @@
 }
 
 .username {
+    height: 20%;
+    width: inherit;
     margin: 0;
     font-family: Roboto;
     font-size: 1.8rem;
@@ -39,14 +42,17 @@
 }
 
 .categories-choosen {
-    margin-top: 2.3vh;
+    width: inherit;
+    height: 76%;
+    margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
     gap: 1vh;
 }
 
 .categories-choosen>div {
-    width: 24%;
+    width: 28%;
     height: 30%;
     border-radius: 20px;
     background: rgba(159, 148, 255, 1);
