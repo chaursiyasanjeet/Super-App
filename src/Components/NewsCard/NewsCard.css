@@ -38,7 +38,3 @@
 .news-title>span {
     font-size: 0.5rem;
 }
-
-p::-webkit-scrollbar {
-    display: none;
-}

@@ -8,7 +8,9 @@
 .left-part {
     width: 65vw;
     height: 84vh;
-    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .right-part {
@@ -17,47 +19,37 @@
     border-radius: 6px;
 }
 
-.right-part>img {
-    width: inherit;
-    border-radius: 5px 5px 0 0;
-    height: 55%;
+.left-top {
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.right-part>p {
-    margin: 0;
-    height: 40%;
-    padding: 3% 8% 2% 7%;
-    overflow-y: scroll;
-    font-family: Roboto;
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 1rem;
-    text-align: justify;
-    color: rgba(39, 39, 39, 1);
-}
-
-.news-title {
-    position: absolute;
-    bottom: 45.9%;
-    width: inherit;
-    height: 17%;
-    background: rgba(0, 0, 0, 0.74);
-    padding: 0.8% 1% 0% 1%;
-    font-family: Roboto;
-    font-size: 0.8rem;
-    font-weight: 550;
-    line-height: 1.3rem;
-    letter-spacing: 0.01em;
-    text-align: left;
+.left-top-left {
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.news-title>span {
-    font-size: 0.5rem;
+
+
+
+.weather-details {
+    border-radius: 6px;
+    height: 35%;
+    background-color: azure;
 }
 
-p::-webkit-scrollbar {
+
+
+
+.timer {
+    height: 35%;
+    background-color: rgba(30, 35, 67, 1);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar {
     display: none;
 }
