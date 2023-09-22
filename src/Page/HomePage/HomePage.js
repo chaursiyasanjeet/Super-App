@@ -3,6 +3,7 @@ import NewsCard from "../../Components/NewsCard/NewsCard";
 import Note from "../../Components/Notes/Note";
 import UserDetails from "../../Components/UserDetails/UserDetails";
 import Weather from "../../Components/Weather/Weather";
+import Timer from "../../Components/Timer/Timer";
 function HomePage() {
   return (
     <div className="homepage-container">
@@ -14,7 +15,9 @@ function HomePage() {
           </div>
           <Note />
         </div>
-        <div className="timer"></div>
+        <div className="left-bottom">
+          <Timer />
+        </div>
       </section>
 
       <section className="right-part">
