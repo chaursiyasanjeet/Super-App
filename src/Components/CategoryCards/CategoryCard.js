@@ -8,12 +8,12 @@ function CategoryCard({
   cardSelect,
   setCardSelect,
   selectedStatus,
+  setError,
 }) {
   const selected = useRef(null);
 
   const handleselect = (e) => {
     const cardName = selected.current.innerText;
-    selected.current.classList.toggle("selected");
     const exist = cardSelect.indexOf(cardName);
 
     if (exist !== -1) {
@@ -21,6 +21,10 @@ function CategoryCard({
       setCardSelect([...cardSelect]);
     } else {
       setCardSelect([...cardSelect, cardName]);
+    }
+
+    if (cardSelect.length >= 2) {
+      setError(false);
     }
   };
 

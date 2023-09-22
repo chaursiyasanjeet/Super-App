@@ -14,7 +14,6 @@
     padding: 0 1% 2% 1.5%;
     color: rgba(255, 255, 255, 1);
     cursor: pointer;
-    box-sizing: border-box;
 }
 
 .cards>img {

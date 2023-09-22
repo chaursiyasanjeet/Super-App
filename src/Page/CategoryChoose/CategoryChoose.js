@@ -81,6 +81,7 @@ function CategoryChoose() {
               cardSelect={cardSelect}
               setCardSelect={setCardSelect}
               selectedStatus={cardSelect.includes(item.name) ? true : false}
+              setError={setError}
             />
           );
         })}
