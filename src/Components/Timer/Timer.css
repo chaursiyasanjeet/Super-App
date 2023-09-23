@@ -12,10 +12,72 @@
 
 .timer {
     font-family: Roboto;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     line-height: 42px;
     letter-spacing: 0.04em;
     text-align: center;
     color: rgba(255, 255, 255, 1)
+}
+
+.time-setter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.time-countdown {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.time-countdown>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    font-family: Roboto;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.1rem;
+    letter-spacing: 0.04em;
+    color: rgba(148, 148, 148, 1);
+}
+
+.time-countdown>div>img {
+    cursor: pointer;
+}
+
+.time-countdown>div>h3 {
+    margin: 0;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1)
+}
+
+.pointer {
+    font-size: 2rem;
+    position: relative;
+    top: 8.6%;
+}
+
+.time-setter>button {
+    border: none;
+    background-color: rgba(255, 106, 106, 1);
+    border-radius: 20px;
+    font-family: Roboto;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    transition: 2s
+}
+
+.time-setter>button:active {
+    scale: 0.4
 }

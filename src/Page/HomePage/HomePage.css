@@ -5,6 +5,25 @@
     color: white;
 }
 
+.homepage-container>button {
+    position: absolute;
+    bottom: 1.2vh;
+    right: 3vw;
+    width: 8vw;
+    height: 5vh;
+    font-family: DM Sans;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    border: none;
+    background-color: rgba(20, 138, 8, 1);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 .left-part {
     width: 65vw;
     height: 84vh;

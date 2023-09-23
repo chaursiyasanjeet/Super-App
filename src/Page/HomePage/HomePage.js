@@ -1,10 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import NewsCard from "../../Components/NewsCard/NewsCard";
 import Note from "../../Components/Notes/Note";
 import UserDetails from "../../Components/UserDetails/UserDetails";
 import Weather from "../../Components/Weather/Weather";
 import Timer from "../../Components/Timer/Timer";
+
 function HomePage() {
+  const redirect = useNavigate();
+  const handleClick = () => {
+    redirect("/movie");
+  };
+
   return (
     <div className="homepage-container">
       <section className="left-part">
@@ -23,6 +30,7 @@ function HomePage() {
       <section className="right-part">
         <NewsCard />
       </section>
+      <button onClick={handleClick}>Browse</button>
     </div>
   );
 }
