@@ -5,7 +5,7 @@ function NewsCard() {
   const [news, setNews] = useState();
   const fetchNews = () => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=41591e7024dc47c48999ce6c589ae8ce"
+      "http://newsapi.org/v2/top-headlines?country=in&apiKey=41591e7024dc47c48999ce6c589ae8ce"
     )
       .then((res) => {
         return res.json();
@@ -21,7 +21,6 @@ function NewsCard() {
           { hour: "numeric", minute: "numeric", hour12: true }
         )}`;
         data.articles[articleNo].publishedAt = dateFormat;
-
         setNews(data.articles[articleNo]);
       })
       .catch((error) => {
