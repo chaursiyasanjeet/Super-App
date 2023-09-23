@@ -5,7 +5,7 @@ function UserDetails() {
   const category = JSON.parse(localStorage.getItem("categories"));
 
   const data = category.map((item, index) => {
-    return <div>{item}</div>;
+    return <div key={index}>{item}</div>;
   });
 
   return (

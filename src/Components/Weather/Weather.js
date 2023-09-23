@@ -8,7 +8,7 @@ function Weather() {
   const [weather, setWeather] = useState();
   const weatherData = () => {
     fetch(
-      "http://api.weatherapi.com/v1/current.json?key=ba58c518ea934e8596b171103232209&q=India&aqi=no"
+      "https://api.weatherapi.com/v1/current.json?key=ba58c518ea934e8596b171103232209&q=India&aqi=no"
     )
       .then((res) => {
         return res.json();
