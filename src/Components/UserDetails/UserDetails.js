@@ -4,10 +4,6 @@ function UserDetails() {
   const user = JSON.parse(localStorage.getItem("userData"));
   const category = JSON.parse(localStorage.getItem("categories"));
 
-  const data = category.map((item, index) => {
-    return <div key={index}>{item}</div>;
-  });
-
   return (
     <div className="user-details-box">
       <img src={profile} alt="profile" />
@@ -15,7 +11,11 @@ function UserDetails() {
         <span>{user.name}</span>
         <span>{user.email}</span>
         <h2 className="username">{user.userName}</h2>
-        <div className="categories-choosen">{data}</div>
+        <div className="categories-choosen">
+          {category.map((item, index) => {
+            return <div key={index}>{item}</div>;
+          })}
+        </div>
       </div>
     </div>
   );

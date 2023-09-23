@@ -5,14 +5,13 @@ function NewsCard() {
   const [news, setNews] = useState();
   const fetchNews = () => {
     fetch(
-      "http://newsapi.org/v2/top-headlines?country=in&apiKey=41591e7024dc47c48999ce6c589ae8ce"
+      "https://newsapi.org/v2/top-headlines?country=in&apiKey=41591e7024dc47c48999ce6c589ae8ce"
     )
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         const articleNo = Math.floor(Math.random() * 20);
-
         const inputDate = new Date(data.articles[articleNo].publishedAt);
         const dateFormat = `${
           +inputDate.getMonth() + 1

@@ -26,7 +26,6 @@ function Weather() {
         data.location.date = date;
         data.location.time = time;
         setWeather(data);
-        console.log(data);
       })
       .catch((err) => {
         console.log(err);
