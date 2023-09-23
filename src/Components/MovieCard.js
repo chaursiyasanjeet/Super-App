@@ -82,24 +82,19 @@ function MovieCard({ category }) {
     },
   ];
 
-  const fetchData = async () => {
-    try {
-      const genreItem = genre.find((item) => item.name === category);
-      if (genreItem) {
-        const genreId = genreItem.id;
-        const response = await fetch(
-          `https://api.themoviedb.org/3/discover/movie?api_key=c07a5a533df47041fe0333a624fd7225&with_genres=${genreId}`
-        );
-        if (response.ok) {
-          const data = await response.json();
+  const fetchData = () => {
+    const genreItem = genre.find((item) => item.name === category);
+    if (genreItem) {
+      const genreId = genreItem.id;
+      fetch(
+        `https://api.themoviedb.org/3/discover/movie?api_key=c07a5a533df47041fe0333a624fd7225&with_genres=${genreId}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
           const randomMovies = data.results.slice(0, 4);
           setMoviesData(randomMovies);
-        } else {
-          console.error("Failed to fetch data");
-        }
-      }
-    } catch (error) {
-      console.error("Error:", error);
+        })
+        .catch((err) => console.log(err));
     }
   };
 
