@@ -15,7 +15,7 @@ function MovieDisplay() {
         <div>
           <h1>Super app</h1>
           <img
-            onClick={() => redirect("./homepage")}
+            onClick={() => redirect("/homepage")}
             src={profile}
             alt="profile"
           />
