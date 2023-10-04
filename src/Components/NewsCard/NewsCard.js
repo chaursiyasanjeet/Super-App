@@ -33,11 +33,23 @@ function NewsCard() {
 
   return (
     <>
-      <img className="news-img" src={news && news.urlToImage} alt="news" />
-      <p className="news-content">{news && news.content}</p>
+      <img
+        className="news-img"
+        src={
+          news
+            ? news.urlToImage
+            : "https://static.foxnews.com/foxnews.com/content/uploads/2023/09/GettyImages-1662782212.jpg"
+        }
+        alt="news"
+      />
+      <p className="news-content">
+        {news
+          ? news.content
+          : "Do you remember way back in 2021 when Elon Musk was the darling of the Left of the cultural elite? He was building electric cars and then launching them into space on rockets he built. He went to all"}
+      </p>
       <div className="news-title">
-        {news && news.title}
-        <span>{news && news.publishedAt}</span>
+        {news ? news.title : "Biden's war on everything Elon Musk"}
+        <span>{news ? news.publishedAt : "10-4-2023|09:33 AM"}</span>
       </div>
     </>
   );
