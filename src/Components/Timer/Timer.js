@@ -78,7 +78,7 @@ function Timer() {
     <>
       <div className="countdown-container">
         <CountdownCircleTimer
-          size={140}
+          size={130}
           strokeWidth={5}
           trailColor="##191e39"
           isPlaying={playing}
